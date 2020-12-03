@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "../../Styles/Nav.css";
 function Navbar() {
@@ -13,37 +14,21 @@ function Navbar() {
             transform: open ? "translateX(0px)" : "",
           }}
         >
-          <Link to="/">
-            <li>
-              <a>Home</a>
-            </li>
-          </Link>
-
-          <Link to="/about">
-            <li>
-              <a>About</a>
-            </li>
-          </Link>
-          <Link to="/meeting">
-            <li>
-              <a>Meetings</a>
-            </li>
-          </Link>
-          <Link to="/complaint">
-            <li>
-              <a>Compalints</a>
-            </li>
-          </Link>
-          <Link to="/login">
-            <li>
-              <a>Login</a>
-            </li>
-          </Link>
-          <Link to="/signup">
-            <li>
-              <a>Signup</a>
-            </li>
-          </Link>
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+          <li>
+            <Link to="/meeting">Meetings</Link>
+          </li>
+          <li>
+            <Link to="/complaint">Complaints</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
         </ul>
         <i onClick={() => setOpen(!open)} className="fas fa-bars burger"></i>
       </nav>
